@@ -2,9 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-SQL_ALCHEMY_URL="mysql+pymysql://root:Mahesh1234@localhost/leave_system"
+SQLALCHEMY_DATABASE_URL="myqsl+pymysql://your_root:your_password@localhost:port/trainee_icgms"
 
-engine=create_engine(SQL_ALCHEMY_URL,echo=True)
+engine=create_engine(SQLALCHEMY_DATABASE_URL,echo=True)
 
 SessionLocal=sessionmaker(autocommit=False,autoflush=False,bind=engine)
 
